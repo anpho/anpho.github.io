@@ -35,13 +35,9 @@ Forked from author and fixed bugs on i18n.
 
 >A popular board game in 2013-2014, by swiping boxes you can merge two 2 into 4, and making it 2048 to win a round.
 
-[Download 2048 from BlackBerry World](https://appworld.blackberry.com/webstore/content/50976889)
-
-[Download 4096 from BlackBerry World](https://appworld.blackberry.com/webstore/content/52432887)
-
-[2048 Source](https://github.com/anpho/2048-in-Cascades)
-
-[4096 Source](https://github.com/anpho/4096)
+------------------ | ------------------- | ----------------------
+2048 | [Download](https://appworld.blackberry.com/webstore/content/50976889) | [Source](https://github.com/anpho/2048-in-Cascades)
+4096 | [Download](https://appworld.blackberry.com/webstore/content/52432887) | [Source](https://github.com/anpho/4096)
 
 #### Abstract Wallpapers
 
@@ -76,8 +72,4 @@ Forked from author and fixed bugs on i18n.
 
 ### Get In Touch
 
-[Email Me](mailto:anphorea@gmail.com)
-
-[Telegram](http://t.me/anphogroup)
-
-[@Twitter](https://twitter.com/anpho)
+[Email Me](mailto:anphorea@gmail.com) / [Telegram](http://t.me/anphogroup) / [@Twitter](https://twitter.com/anpho)
