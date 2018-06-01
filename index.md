@@ -32,6 +32,7 @@ Forked from author and fixed bugs on i18n.
 >A popular board game in 2013-2014, by swiping boxes you can merge two 2 into 4, and making it 2048 to win a round.
 
 2048 / [Download](https://appworld.blackberry.com/webstore/content/50976889) / [Source](https://github.com/anpho/2048-in-Cascades)
+
 4096 / [Download](https://appworld.blackberry.com/webstore/content/52432887) / [Source](https://github.com/anpho/4096)
 
 ### Abstract Wallpapers
@@ -161,7 +162,7 @@ App  | Desc | Download | Source
 PinYin | Pinyin IME | [Download](https://appworld.blackberry.com/webstore/content/26021873) | [Source](https://github.com/anpho/BlackBerry-PlayBook-Apps)
 Wubi | Wubi IME | [Download](https://appworld.blackberry.com/webstore/content/26020876) | [Source](https://github.com/anpho/BlackBerry-PlayBook-Apps)
 Pixir Express | Pixir Express for playbook | [Download](https://appworld.blackberry.com/webstore/content/25359927) |
-Gps for China | a simple map app | https://appworld.blackberry.com/webstore/content/26851897 |
+Gps for China | a simple map app | [Download](https://appworld.blackberry.com/webstore/content/26851897) |
 
 
 ## Get In Touch
