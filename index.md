@@ -1,4 +1,4 @@
-## anpho's apps
+## anpho's apps, libs, docs
 
 ### Windows Applications
 
@@ -45,6 +45,11 @@ Wubi | Wubi IME | [Download](https://appworld.blackberry.com/webstore/content/26
 Pixir Express | Pixir Express for playbook | [Download](https://appworld.blackberry.com/webstore/content/25359927) |
 Gps for China | a simple map app | [Download](https://appworld.blackberry.com/webstore/content/26851897) |
 
+## Documents
+
+[Android网络连接感叹号修复](https://anpho.github.io/android-captive-portal-fix.html)
+
+[音乐随心听旧版解锁工具](https://anpho.github.io/unlock-music-box.html)
 
 ## Get In Touch
 
