@@ -9,9 +9,7 @@ TrimStart | TrimStart is a tool to trim some seconds from the begining of video 
 Win32DiskImager | This utility is used to read and write raw image files to SD and USB memory devices.Forked from author and fixed bugs on i18n. | [Download](https://github.com/anpho/win32diskimager-qt5/releases) | [Source](https://github.com/anpho/win32diskimager-qt5)
 add-watermark-by-exit | A simple tool to add Date watermark to JPEG file. | [Download](https://github.com/anpho/add-date-watermark-to-jpeg-file/releases) | [Source](https://github.com/anpho/add-date-watermark-to-jpeg-file)
 
-### BlackBerry 10 Apps
-
-![](https://appworld.blackberry.com/webstore/resources/components/miscellaneous/images/blackberry-appworld-logo.png)
+### BlackBerry 10 Apps on ![](https://appworld.blackberry.com/webstore/resources/components/miscellaneous/images/blackberry-appworld-logo.png)
 
 App | Desc | Download | Source
 --- | ---- | -------- | ------
@@ -38,7 +36,7 @@ Video Melody | A vid.me client, well, vid.me is no longer exists so... | | [Sour
 Write(Read) | A simple app which helps you generate pinyin. | [Download](https://appworld.blackberry.com/webstore/content/49623888)  | 
 Zhihu Daily | Zhihu Daily for BlackBerry 10 | [Download](https://appworld.blackberry.com/webstore/content/58370266) | [Source](https://github.com/anpho/zhihu)
 
-## BlackBerry PlayBook Apps
+## BlackBerry PlayBook Apps on ![](https://appworld.blackberry.com/webstore/resources/components/miscellaneous/images/blackberry-appworld-logo.png)
 
 App  | Desc | Download | Source
 ---- | ---- | ---- | ----
