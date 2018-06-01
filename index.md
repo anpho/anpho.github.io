@@ -11,6 +11,8 @@ add-watermark-by-exit | A simple tool to add Date watermark to JPEG file. | [Dow
 
 ### BlackBerry 10 Apps
 
+![](https://appworld.blackberry.com/webstore/resources/components/miscellaneous/images/blackberry-appworld-logo.png)
+
 App | Desc | Download | Source
 --- | ---- | -------- | ------
 2048 | A popular board game in 2013-2014, by swiping boxes you can merge two 2 into 4, and making it 2048 to win a round. | [Download](https://appworld.blackberry.com/webstore/content/50976889) | [Source](https://github.com/anpho/2048-in-Cascades)
