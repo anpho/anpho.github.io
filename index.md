@@ -1,37 +1,72 @@
-## Welcome to GitHub Pages
+## anpho's apps
 
-You can use the [editor on GitHub](https://github.com/anpho/anpho.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+Hi~ This is the publish site for my apps on BlackBerry 10 / Win32 / UWP, please feel free to submit issues / fork my sources etc.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Windows Applications
 
-### Markdown
+#### TrimStart
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+>TrimStart is a tool to trim some seconds from the begining of video files, using ffmpeg as a backend.
 
-```markdown
-Syntax highlighted code block
+[Download](https://github.com/anpho/ffmpeg-ext-tools/releases)
+[Source](https://github.com/anpho/ffmpeg-ext-tools)
 
-# Header 1
-## Header 2
-### Header 3
+#### Win32DiskImager for Windows
 
-- Bulleted
-- List
+>This utility is used to read and write raw image files to SD and USB memory devices.
+Forked from author and fixed bugs on i18n.
 
-1. Numbered
-2. List
+[Download](https://github.com/anpho/win32diskimager-qt5/releases)
+[Source](https://github.com/anpho/win32diskimager-qt5)
 
-**Bold** and _Italic_ and `Code` text
+#### add-watermark-by-exit
 
-[Link](url) and ![Image](src)
-```
+>A simple tool to add Date watermark to JPEG file. Yep, I miss my Canon IXUS.
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+[Download](https://github.com/anpho/add-date-watermark-to-jpeg-file/releases)
+[Source](https://github.com/anpho/add-date-watermark-to-jpeg-file)
 
-### Jekyll Themes
+### BlackBerry 10 Apps
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/anpho/anpho.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+#### 2048 / 4096
 
-### Support or Contact
+>A popular board game in 2013-2014, by swiping boxes you can merge two 2 into 4, and making it 2048 to win a round.
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+[Download 2048 from BlackBerry World](https://appworld.blackberry.com/webstore/content/50976889)
+[Download 4096 from BlackBerry World](https://appworld.blackberry.com/webstore/content/52432887)
+[2048 Source](https://github.com/anpho/2048-in-Cascades)
+[4096 Source](https://github.com/anpho/4096)
+
+#### Abstract Wallpapers
+
+>A collection of abstract wallpapers.
+
+[Download](https://appworld.blackberry.com/webstore/content/54281888)
+
+#### Akari URL Shortener
+
+>An URL shortener.
+
+[Download](https://appworld.blackberry.com/webstore/content/59962565)
+[Source](https://github.com/anpho/Akari-URL-Shortener)
+
+#### Bing Wallpaper
+
+>An app to display 14 days of Bing wallpapers and let you download / set them.
+
+[Download](https://appworld.blackberry.com/webstore/content/51315887)
+[Source](https://github.com/anpho/bing-wallpaper)
+
+#### CnBeta 10
+
+>App which pulls cnbeta news and display in dynamtic QML controls.
+
+[Download](https://appworld.blackberry.com/webstore/content/59997305)
+[Source](https://github.com/anpho/cnbeta)
+
+
+### Get In Touch
+
+[Email Me](mailto:anphorea@gmail.com)
+[Telegram](http://t.me/anphogroup)
+[@Twitter](https://twitter.com/anpho)
