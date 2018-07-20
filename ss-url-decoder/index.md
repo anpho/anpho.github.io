@@ -1,6 +1,6 @@
 # Shadowsocks URL Decoder
 
-Paste Shadowsocks URL here:
+Paste Shadowsocks URL here, which should looks like ``` ss://XXXXXXXXXXXXXXX ```:
 
 <input id="ssurl"><button onclick="javascript:decodess()">Decode</button>
 
@@ -13,7 +13,7 @@ Protocol | Encryption Method | Password | Server | Port
 	<span id="msg"></span>
 </div>
 
-[Home](https://anpho.github.io)
+[Home](/)
 
 <script>
   function decodess(){
