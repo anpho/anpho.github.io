@@ -51,7 +51,9 @@ Gps for China | a simple map app | [Download](https://appworld.blackberry.com/we
 
 [音乐随心听旧版解锁工具](https://anpho.github.io/unlock-music-box.html)
 
-[How to cross-compile libraries for BlackBerry 10](https://anpho.github.io/how-to-crosscompile-for-bb10/)
+[BlackBerry 10 库的交叉编译](https://anpho.github.io/how-to-crosscompile-for-bb10/)
+
+[Shadowsocks URL 解码工具](https://anpho.github.io/ss-url-decoder)
 
 ## Get In Touch
 
