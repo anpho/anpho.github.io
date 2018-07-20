@@ -71,4 +71,4 @@ Now open terminal here, type ```make``` to build this library for Simulator mode
 Right-click your project, select configure / add library , add an External Library , specify the libbotan-1.10-release.so / libbotan-1.10-simulator.so , then add the include folder ( look for it in the ```build``` folder ). done.
 
 
-[Back to index](https://anpho.github.io)
+[Home](/)
