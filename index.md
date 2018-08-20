@@ -1,4 +1,4 @@
-## anpho's apps, libs, docs
+## apps, libs, docs
 
 Platform | Apps
 ---------|-----
