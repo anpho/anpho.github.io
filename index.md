@@ -1,21 +1,25 @@
+Looking for jobs in Canada ...
+
 ## apps, libs, docs
+
+This section includes apps & libs I've built.
 
 Platform | Apps
 ---------|-----
-Windows  | [Details](./windows-apps/)
+Windows Desktop and UWP  | [Details](./windows-apps/)
 BlackBerry 10 | [Details](./blackberry10-apps/)
-playbook | [Details](./playbook-apps/)
+BlackBerry playbook | [Details](./playbook-apps/)
 
 
 ## Documents
 
-[Android网络连接感叹号修复](https://anpho.github.io/android-captive-portal-fix.html)
+[Fix Android Captive Portal Issue](https://anpho.github.io/android-captive-portal-fix.html)
 
-[音乐随心听旧版解锁工具](https://anpho.github.io/unlock-music-box.html)
+[MusicBox for BlackBerry 10 Keygen](https://anpho.github.io/unlock-music-box.html)
 
-[BlackBerry 10 库的交叉编译](https://anpho.github.io/how-to-crosscompile-for-bb10/)
+[Cross-compile for BlackBerry 10](https://anpho.github.io/how-to-crosscompile-for-bb10/)
 
-[Shadowsocks URL 解码工具](https://anpho.github.io/ss-url-decoder)
+[Shadowsocks URL Decoder](https://anpho.github.io/ss-url-decoder)
 
 ## Get In Touch
 
