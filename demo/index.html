@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <style type="text/css">
+        body,
+        html,
+        #container {
+            width: 100%;
+            height: 100%;
+            margin: 0px
+        }
+    </style>
+    <title>扬大康源乳业直营点地图</title>
+</head>
+
+<body>
+    <div id="container" tabindex="0"></div>
+    <script>
+        storeData = [
+            { title: "【金鑫】顺达路金鑫花园西门优烨超市", lng: 119.403541, lat: 32.3705 },
+            { title: "【江阳】江阳菜场内", lng: 119.415768, lat: 32.443278 },
+            { title: "【彩衣】彩衣街117号", lng: 119.443983, lat: 32.403453 },
+            { title: "【四村】苏农四村西门传达室", lng: 119.430877, lat: 32.401975 },
+            { title: "【美琪】美琪小区莱福苑28-10车库", lng: 119.399958, lat: 32.393794 },
+            { title: "【九龙】九龙小区腾龙苑05栋119", lng: 119.448268, lat: 32.36509 },
+            { title: "【西湖】西湖镇司徒庙路116号", lng: 119.406442, lat: 32.432088 },
+            { title: "【连运】连运小区北门，连运五期315-10号东", lng: 119.457197, lat: 32.371591 },
+            { title: "【港湾】扬子江北路377号", lng: 119.421085, lat: 32.407903 },
+            { title: "【五村北门】苏农五村北门传达室", lng: 119.428028, lat: 32.400058 },
+            { title: "【南厂区】扬州食品工业园鼎兴路88号", lng: 119.448521, lat: 32.354046 },
+            { title: "【东门市】扬州市大学北路60号", lng: 119.432249, lat: 32.396606 },
+            { title: "【石塔寺】石塔寺农贸市场B区18号", lng: 119.434524, lat: 32.400802 },
+            { title: "【新鲜到家】江都路337-1号", lng: 119.466683, lat: 32.408726 },
+            { title: "【鸿福】黄金坝路120急救中心正对面", lng: 119.456303, lat: 32.430466 }
+
+        ]
+        window.onLoad = function () {
+            var map = new AMap.Map('container');
+            AMap.plugin('AMap.ToolBar', function () {//异步加载插件
+                var toolbar = new AMap.ToolBar();
+                map.addControl(toolbar);
+            });
+            AMap.plugin("AMap.Geolocation", function () {
+                var loc = new AMap.Geolocation();
+                map.addControl(loc);
+            })
+            // load markers
+            var markers = []
+            storeData.forEach(element => {
+                var marker = new AMap.Marker({
+                    position: new AMap.LngLat(element.lng, element.lat),
+                    title: element.title
+                });
+                markers.push(marker);
+            });
+            map.add(markers);
+        }
+        var url = 'https://webapi.amap.com/maps?v=1.4.15&key=227ab39c4d55b983d147ca741a62137d&callback=onLoad';
+        var jsapi = document.createElement('script');
+        jsapi.charset = 'utf-8';
+        jsapi.src = url;
+        document.head.appendChild(jsapi);
+    </script>
+</body>
+
+</html>
