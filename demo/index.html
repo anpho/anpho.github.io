@@ -102,7 +102,11 @@
             { title: "【镇江西津渡店】镇江市西津渡利群巷1号", lng: 119.43596, lat: 32.220361 }
         ]
         window.onLoad = function () {
-            var map = new AMap.Map('container');
+            var map = new AMap.Map('container',{
+                zoom:18
+            });
+            map.setFitView();
+
             AMap.plugin('AMap.ToolBar', function () {//异步加载插件
                 var toolbar = new AMap.ToolBar();
                 map.addControl(toolbar);
