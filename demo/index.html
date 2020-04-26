@@ -13,6 +13,14 @@
             height: 100%;
             margin: 0px
         }
+
+        #navi {
+            border-radius: 5pt;
+            border-width: 5pt;
+            display: none;
+            text-align: center;
+            align-self: center;
+        }
     </style>
     <title>扬大康源乳业直营点地图</title>
 </head>
@@ -22,108 +30,131 @@
     </div>
     <script>
         storeData = [
-            { title: "【金鑫店】顺达路金鑫花园西门优烨超市", lng: 119.403541, lat: 32.3705 },
-            { title: "【彩衣街店】彩衣街117号", lng: 119.443983, lat: 32.403453 },
-            { title: "【九龙店】九龙小区腾龙苑05栋119区", lng: 119.448142, lat: 32.36511 },
-            { title: "【连运店】连运小区北门，连运五期31区5-10号东", lng: 119.457547, lat: 32.371545 },
-            { title: "【五村南门店】苏农五村南门传达室", lng: 119.430561, lat: 32.398924 },
-            { title: "【五村南门店】苏农五村北门传达室", lng: 119.428028, lat: 32.400058 },
-            { title: "【南厂店】扬州食品工业园鼎兴路88号", lng: 119.448525, lat: 32.353206 },
-            { title: "【大学路店】扬州市大学北路60号", lng: 119.432179, lat: 32.396654 },
-            { title: "【北柳巷店】北柳巷46号", lng: 119.445668, lat: 32.400373 },
-            { title: "【琼花观店】文昌中路360号", lng: 119.455296, lat: 32.401847 },
-            { title: "【文峰店】文峰路扬冶45号", lng: 119.446687, lat: 32.380487 },
-            { title: "【西湖景园店】西湖景园51栋103车库", lng: 119.370546, lat: 32.432166 },
-            { title: "【朝阳店】江都南路7号", lng: 119.469797, lat: 32.392632 },
-            { title: "【新坝店】扬州广陵区新坝中心幼儿园西门", lng: 119.622594, lat: 32.276011 },
-            { title: "【扬子江店】蒋庄新苑17号", lng: 119.423057, lat: 32.383959 },
-            { title: "【紫阳苑店】百祥园南门西百吉巷9区号", lng: 119.396911, lat: 32.377986 },
-            { title: "【扬子新苑】汪家路许方新村北门", lng: 119.468265, lat: 32.319132 },
-            { title: "【新城花园店】新城花园北大门向南50米", lng: 119.420339, lat: 32.384375 },
-            { title: "【翠月南苑店】翠月南苑3306号", lng: 119.49324, lat: 32.37694 },
-            { title: "【公道店】人民东路259区号", lng: 119.359547, lat: 32.591445 },
-            { title: "【荷花池店】荷花池新村138号", lng: 119.434254, lat: 32.386425 },
-            { title: "【新世纪花园店】新世纪花园南大门", lng: 119.409225, lat: 32.379229 },
-            { title: "【和昌店】广陵区新东路47号和昌运河尚郡公馆2幢商业07室", lng: 119.497108, lat: 32.397211 },
-            { title: "【何桥店】邗江区蒋王街道何桥综合楼天天水果零食超市", lng: 119.364004, lat: 32.362275 },
-            { title: "【兴城店】兴城河路72号", lng: 119.411662, lat: 32.385617 },
-            { title: "【李典店】扬州市广陵区李典镇可可宝贝孕婴会所（光阳春和苑）", lng: 119.580678, lat: 32.324171 },
-            { title: "【万达店】邗上南街与金阳巷交界西侧", lng: 119.401786, lat: 32.375183 },
-            { title: "【宝龙店】宝龙广场8栋115号", lng: 119.422235, lat: 32.37082 },
-            { title: "【东花园店】东花园河南新村72幢101", lng: 119.46591, lat: 32.38067 },
-            { title: "【槐泗店】槐泗镇弘扬北路29区号", lng: 119.449438, lat: 32.460559 },
-            { title: "【东方名城店】广陵区东方名城262-109区", lng: 119.490068, lat: 32.389302 },
-            { title: "【杨寿店】杨寿镇迎宾路40号", lng: 119.32361, lat: 32.529738 },
-            { title: "【依云城邦店】依云城邦北门东侧", lng: 119.431971, lat: 32.347891 },
-            { title: "【来的店】万福西路158号优步花园向东50米", lng: 119.473975, lat: 32.417147 },
-            { title: "【育才店】育才本部对面（南门新村3幢108）", lng: 119.441204, lat: 32.389705 },
-            { title: "【杉湾店】杉湾路18号杉湾花园一期东门门卫", lng: 119.44365, lat: 32.369019 },
-            { title: "【城北店】蜀冈-瘦西湖风景名胜区里毓家食品店", lng: 119.44851, lat: 32.457912 },
-            { title: "【汤旺店】连运路75号（联谊南园）", lng: 19.463056, lat: 32.368634 },
-            { title: "【红桥店】头桥镇富康路2号", lng: 119.652147, lat: 32.306455 },
-            { title: "【广陵店】广陵医院斜对面", lng: 119.45717, lat: 32.394726 },
-            { title: "【顺达店】顺达广场北门门口", lng: 119.404679, lat: 32.361026 },
-            { title: "【润茂店】润茂广场北大门（水街）", lng: 119.381137, lat: 32.374724 },
-            { title: "【沙中店】沙中一村17-101", lng: 119.474022, lat: 32.399329 },
-            { title: "【翠岗路店】翠岗路171号（雍华府北门西侧）", lng: 119.399723, lat: 32.40282 },
-            { title: "【苏农四村店】苏农四村西门传达室", lng: 119.430877, lat: 32.401975 },
-            { title: "【美琪店】美琪小区莱福苑28-10车库", lng: 119.399958, lat: 32.393794 },
-            { title: "【西湖店】西湖镇司徒庙路116号", lng: 119.406442, lat: 32.432088 },
-            { title: "【港湾扬子江店】扬子江北路377号", lng: 119.420348, lat: 32.408726 },
-            { title: "【唐城店】念泗路扬大公寓旁", lng: 119.424704, lat: 32.405598 },
-            { title: "【石塔店】石塔寺农贸市场B区18号", lng: 119.435521, lat: 32.400478 },
-            { title: "【新盛店】新盛街道邻里农贸市场一楼熟食区6号", lng: 119.372253, lat: 32.386418 },
-            { title: "【扬州天下店】扬州天下西大门南侧（维扬路49区9区-16号）", lng: 119.412605, lat: 32.417208 },
-            { title: "【四季园店】秋雨西路6-3", lng: 119.41397, lat: 32.394726 },
-            { title: "【念香苑店】海德公园北门8栋2号", lng: 119.403788, lat: 32.412254 },
-            { title: "【金叶店】邗江区西峰路9区号金叶广场5座125号", lng: 119.395851, lat: 32.422473 },
-            { title: "【怡景苑店】京华城怡景苑大西门保安亭", lng: 119.383818, lat: 32.388077 },
-            { title: "【莱克多店】金色梦想街区s3-121莱克多便利超市", lng: 119.384382, lat: 32.42754 },
-            { title: "【全季店】文昌西路47-51号", lng: 119.41225, lat: 32.398697 },
-            { title: "【天和国际店】邗江区文汇西路452号楼万宁便利超市", lng: 119.390893, lat: 32.38333 },
-            { title: "【蜀冈怡庭店】蜀冈怡庭南门传达室", lng: 119.388171, lat: 32.411333 },
-            { title: "【彩虹汇店】万科彩虹汇扬子江北路B栋102", lng: 119.414449, lat: 32.427441 },
-            { title: "【汇锦花苑店】汇锦花苑东门对面菜场", lng: 119.392176, lat: 32.429749 },
-            { title: "【夕平店】西湖花园北门", lng: 119.394549, lat: 32.414834 },
-            { title: "【江阳店】江阳菜场内", lng: 119.415768, lat: 32.443278 },
-            { title: "【新鲜到家店】江都路337-1号", lng: 119.466683, lat: 32.408726 },
-            { title: "【长征路店】长征西路1-9区", lng: 119.440021, lat: 32.408825 },
-            { title: "【鸿福店】上方寺路中二院北门6号", lng: 119.454457, lat: 32.430687 },
-            { title: "【湾头店】湾头华星农贸市场", lng: 119.499431, lat: 32.423779 },
-            { title: "【福苑店】扬州市瘦西湖福苑东门2-3号（文员文具书店）", lng: 119.468255, lat: 32.433376 },
-            { title: "【凤凰桥店】梅岭西路3号", lng: 119.443686, lat: 32.413085 },
-            { title: "【梅香店】史可法东路42号4栋19区号车库", lng: 119.454107, lat: 32.41134 },
-            { title: "【佳佳花园店】黄金坝路67号佳佳花园203栋-102", lng: 119.456369, lat: 32.440657 },
-            { title: "【老虎山店】老虎山路27号老虎山菜场内", lng: 119.445952, lat: 32.417802 },
-            { title: "【运河水庭店】广陵区运河水庭100号", lng: 119.482538, lat: 32.419136 },
-            { title: "【友谊新村店】扬州市友谊新村2号", lng: 119.442105, lat: 32.421291 },
-            { title: "【镇江青年广场店】镇江市润州区矿机路6-24", lng: 119.473788, lat: 32.195987 },
-            { title: "【镇江朴园店】镇江市润州区黄鹤山路8号", lng: 119.451795, lat: 32.200926 },
-            { title: "【镇江西津渡店】镇江市西津渡利群巷1号", lng: 119.43596, lat: 32.220361 }
+            { title: "【金鑫店】", address:"顺达路金鑫花园西门优烨超市", lng: 119.403541, lat: 32.3705 },
+            { title: "【彩衣街店】", address:"彩衣街117号", lng: 119.443983, lat: 32.403453 },
+            { title: "【九龙店】", address:"九龙小区腾龙苑05栋119区", lng: 119.448142, lat: 32.36511 },
+            { title: "【连运店】", address:"连运小区北门，连运五期31区5-10号东", lng: 119.457547, lat: 32.371545 },
+            { title: "【五村南门店】", address:"苏农五村南门传达室", lng: 119.430561, lat: 32.398924 },
+            { title: "【五村南门店】", address:"苏农五村北门传达室", lng: 119.428028, lat: 32.400058 },
+            { title: "【南厂店】", address:"扬州食品工业园鼎兴路88号", lng: 119.448525, lat: 32.353206 },
+            { title: "【大学路店】", address:"扬州市大学北路60号", lng: 119.432179, lat: 32.396654 },
+            { title: "【北柳巷店】", address:"北柳巷46号", lng: 119.445668, lat: 32.400373 },
+            { title: "【琼花观店】", address:"文昌中路360号", lng: 119.455296, lat: 32.401847 },
+            { title: "【文峰店】", address:"文峰路扬冶45号", lng: 119.446687, lat: 32.380487 },
+            { title: "【西湖景园店】", address:"西湖景园51栋103车库", lng: 119.370546, lat: 32.432166 },
+            { title: "【朝阳店】", address:"江都南路7号", lng: 119.469797, lat: 32.392632 },
+            { title: "【新坝店】", address:"扬州广陵区新坝中心幼儿园西门", lng: 119.622594, lat: 32.276011 },
+            { title: "【扬子江店】", address:"蒋庄新苑17号", lng: 119.423057, lat: 32.383959 },
+            { title: "【紫阳苑店】", address:"百祥园南门西百吉巷9区号", lng: 119.396911, lat: 32.377986 },
+            { title: "【扬子新苑】", address:"汪家路许方新村北门", lng: 119.468265, lat: 32.319132 },
+            { title: "【新城花园店】", address:"新城花园北大门向南50米", lng: 119.420339, lat: 32.384375 },
+            { title: "【翠月南苑店】", address:"翠月南苑3306号", lng: 119.49324, lat: 32.37694 },
+            { title: "【公道店】", address:"人民东路259区号", lng: 119.359547, lat: 32.591445 },
+            { title: "【荷花池店】", address:"荷花池新村138号", lng: 119.434254, lat: 32.386425 },
+            { title: "【新世纪花园店】", address:"新世纪花园南大门", lng: 119.409225, lat: 32.379229 },
+            { title: "【和昌店】", address:"广陵区新东路47号和昌运河尚郡公馆2幢商业07室", lng: 119.497108, lat: 32.397211 },
+            { title: "【何桥店】", address:"邗江区蒋王街道何桥综合楼天天水果零食超市", lng: 119.364004, lat: 32.362275 },
+            { title: "【兴城店】", address:"兴城河路72号", lng: 119.411662, lat: 32.385617 },
+            { title: "【李典店】", address:"扬州市广陵区李典镇可可宝贝孕婴会所（光阳春和苑）", lng: 119.580678, lat: 32.324171 },
+            { title: "【万达店】", address:"邗上南街与金阳巷交界西侧", lng: 119.401786, lat: 32.375183 },
+            { title: "【宝龙店】", address:"宝龙广场8栋115号", lng: 119.422235, lat: 32.37082 },
+            { title: "【东花园店】", address:"东花园河南新村72幢101", lng: 119.46591, lat: 32.38067 },
+            { title: "【槐泗店】", address:"槐泗镇弘扬北路29区号", lng: 119.449438, lat: 32.460559 },
+            { title: "【东方名城店】", address:"广陵区东方名城262-109区", lng: 119.490068, lat: 32.389302 },
+            { title: "【杨寿店】", address:"杨寿镇迎宾路40号", lng: 119.32361, lat: 32.529738 },
+            { title: "【依云城邦店】", address:"依云城邦北门东侧", lng: 119.431971, lat: 32.347891 },
+            { title: "【来的店】", address:"万福西路158号优步花园向东50米", lng: 119.473975, lat: 32.417147 },
+            { title: "【育才店】", address:"育才本部对面（南门新村3幢108）", lng: 119.441204, lat: 32.389705 },
+            { title: "【杉湾店】", address:"杉湾路18号杉湾花园一期东门门卫", lng: 119.44365, lat: 32.369019 },
+            { title: "【城北店】", address:"蜀冈-瘦西湖风景名胜区里毓家食品店", lng: 119.44851, lat: 32.457912 },
+            { title: "【汤旺店】", address:"连运路75号（联谊南园）", lng: 19.463056, lat: 32.368634 },
+            { title: "【红桥店】", address:"头桥镇富康路2号", lng: 119.652147, lat: 32.306455 },
+            { title: "【广陵店】", address:"广陵医院斜对面", lng: 119.45717, lat: 32.394726 },
+            { title: "【顺达店】", address:"顺达广场北门门口", lng: 119.404679, lat: 32.361026 },
+            { title: "【润茂店】", address:"润茂广场北大门（水街）", lng: 119.381137, lat: 32.374724 },
+            { title: "【沙中店】", address:"沙中一村17-101", lng: 119.474022, lat: 32.399329 },
+            { title: "【翠岗路店】", address:"翠岗路171号（雍华府北门西侧）", lng: 119.399723, lat: 32.40282 },
+            { title: "【苏农四村店】", address:"苏农四村西门传达室", lng: 119.430877, lat: 32.401975 },
+            { title: "【美琪店】", address:"美琪小区莱福苑28-10车库", lng: 119.399958, lat: 32.393794 },
+            { title: "【西湖店】", address:"西湖镇司徒庙路116号", lng: 119.406442, lat: 32.432088 },
+            { title: "【港湾扬子江店】", address:"扬子江北路377号", lng: 119.420348, lat: 32.408726 },
+            { title: "【唐城店】", address:"念泗路扬大公寓旁", lng: 119.424704, lat: 32.405598 },
+            { title: "【石塔店】", address:"石塔寺农贸市场B区18号", lng: 119.435521, lat: 32.400478 },
+            { title: "【新盛店】", address:"新盛街道邻里农贸市场一楼熟食区6号", lng: 119.372253, lat: 32.386418 },
+            { title: "【扬州天下店】", address:"扬州天下西大门南侧（维扬路49区9区-16号）", lng: 119.412605, lat: 32.417208 },
+            { title: "【四季园店】", address:"秋雨西路6-3", lng: 119.41397, lat: 32.394726 },
+            { title: "【念香苑店】", address:"海德公园北门8栋2号", lng: 119.403788, lat: 32.412254 },
+            { title: "【金叶店】", address:"邗江区西峰路9区号金叶广场5座125号", lng: 119.395851, lat: 32.422473 },
+            { title: "【怡景苑店】", address:"京华城怡景苑大西门保安亭", lng: 119.383818, lat: 32.388077 },
+            { title: "【莱克多店】", address:"金色梦想街区s3-121莱克多便利超市", lng: 119.384382, lat: 32.42754 },
+            { title: "【全季店】", address:"文昌西路47-51号", lng: 119.41225, lat: 32.398697 },
+            { title: "【天和国际店】", address:"邗江区文汇西路452号楼万宁便利超市", lng: 119.390893, lat: 32.38333 },
+            { title: "【蜀冈怡庭店】", address:"蜀冈怡庭南门传达室", lng: 119.388171, lat: 32.411333 },
+            { title: "【彩虹汇店】", address:"万科彩虹汇扬子江北路B栋102", lng: 119.414449, lat: 32.427441 },
+            { title: "【汇锦花苑店】", address:"汇锦花苑东门对面菜场", lng: 119.392176, lat: 32.429749 },
+            { title: "【夕平店】", address:"西湖花园北门", lng: 119.394549, lat: 32.414834 },
+            { title: "【江阳店】", address:"江阳菜场内", lng: 119.415768, lat: 32.443278 },
+            { title: "【新鲜到家店】", address:"江都路337-1号", lng: 119.466683, lat: 32.408726 },
+            { title: "【长征路店】", address:"长征西路1-9区", lng: 119.440021, lat: 32.408825 },
+            { title: "【鸿福店】", address:"上方寺路中二院北门6号", lng: 119.454457, lat: 32.430687 },
+            { title: "【湾头店】", address:"湾头华星农贸市场", lng: 119.499431, lat: 32.423779 },
+            { title: "【福苑店】", address:"扬州市瘦西湖福苑东门2-3号（文员文具书店）", lng: 119.468255, lat: 32.433376 },
+            { title: "【凤凰桥店】", address:"梅岭西路3号", lng: 119.443686, lat: 32.413085 },
+            { title: "【梅香店】", address:"史可法东路42号4栋19区号车库", lng: 119.454107, lat: 32.41134 },
+            { title: "【佳佳花园店】", address:"黄金坝路67号佳佳花园203栋-102", lng: 119.456369, lat: 32.440657 },
+            { title: "【老虎山店】", address:"老虎山路27号老虎山菜场内", lng: 119.445952, lat: 32.417802 },
+            { title: "【运河水庭店】", address:"广陵区运河水庭100号", lng: 119.482538, lat: 32.419136 },
+            { title: "【友谊新村店】", address:"扬州市友谊新村2号", lng: 119.442105, lat: 32.421291 },
+            { title: "【镇江青年广场店】", address:"镇江市润州区矿机路6-24", lng: 119.473788, lat: 32.195987 },
+            { title: "【镇江朴园店】", address:"镇江市润州区黄鹤山路8号", lng: 119.451795, lat: 32.200926 },
+            { title: "【镇江西津渡店】", address:"镇江市西津渡利群巷1号", lng: 119.43596, lat: 32.220361 }
         ]
         window.onLoad = function () {
-            var map = new AMap.Map('container',{
-                zoom:18
+            var map = new AMap.Map('container', {
+                zoom: 15
             });
             map.setFitView();
+            AMap.plugin('AMap.Geolocation', function () {
+                var geolocation = new AMap.Geolocation({
+                    enableHighAccuracy: true,//使用高精度定位
+                    timeout: 10000,          //超过10秒后停止定位
+                    buttonPosition: 'RB',    //定位按钮的停靠位置
+                    buttonOffset: new AMap.Pixel(10, 20),//定位按钮与设置的停靠位置的偏移量，默认：Pixel(10, 20)
+                    zoomToAccuracy: true,   //定位成功后是否自动调整地图视野到定位点
 
-            AMap.plugin('AMap.ToolBar', function () {//异步加载插件
+                });
+                map.addControl(geolocation);
+                geolocation.getCurrentPosition(function (status, result) {
+                    if (status == 'complete') {
+                        //onComplete(result)
+                    } else {
+                        //onError(result)
+                    }
+                });
+            });
+
+            AMap.plugin('AMap.ToolBar', function () {//异步加载
                 var toolbar = new AMap.ToolBar();
                 map.addControl(toolbar);
             });
-            AMap.plugin("AMap.Geolocation", function () {
-                var loc = new AMap.Geolocation();
-                map.addControl(loc);
-            })
+            var infoWindow = new AMap.InfoWindow({ offset: new AMap.Pixel(0, -30) });
             //loadmarkers
             var markers = []
             storeData.forEach(element => {
+                latlng = bd_to_amap(element.lat, element.lng);
                 var marker = new AMap.Marker({
-                    position: new AMap.LngLat(element.lng, element.lat),
+                    position: new AMap.LngLat(latlng[1], latlng[0]),
+                    map: map,
                     title: element.title
                 });
+                marker.content = "<p>" + element.title + "</p><p>地址：" + element.address + "</p><p>坐标：<br>" + latlng[1] + "<br/>" + latlng[0] + "</p><div id=\"navi\" onclick=\"navi(" + latlng[1] + "," + latlng[0] + ")\">导航</div>"
+                marker.on('click', markerClick)
                 markers.push(marker);
             });
+            function markerClick(e) {
+                infoWindow.setContent(e.target.content);
+                infoWindow.open(map, e.target.getPosition());
+            }
             map.add(markers);
         }
         var url = 'https://webapi.amap.com/maps?v=1.4.15&key=227ab39c4d55b983d147ca741a62137d&callback=onLoad';
@@ -131,6 +162,20 @@
         jsapi.charset = 'utf-8';
         jsapi.src = url;
         document.head.appendChild(jsapi);
+        function navi(lat, lng) {
+            console.log(lat)
+            console.log(lng)
+        }
+        pi = 3.1415926535897932384626;
+        function bd_to_amap(lat, lon) {
+            var x = lon - 0.0065;
+            var y = lat - 0.006;
+            var z = Math.sqrt(x * x + y * y) - 0.00002 * Math.sin(y * Math.PI);
+            var theta = Math.atan2(y, x) - 0.000003 * Math.cos(x * Math.PI);
+            var gg_lon = z * Math.cos(theta);
+            var gg_lat = z * Math.sin(theta);
+            return [gg_lat, gg_lon];
+        }
     </script>
 </body>
 
