@@ -1,0 +1,12 @@
+Package: ipkg
+Version: 0.99.163-2
+Section: admin
+Architecture: arm
+Maintainer: jcard
+MD5Sum: 6a4997f8314994edca622ba299dded75
+Size: 74716
+Filename: ipkg_0.99.163-2_arm.ipk
+Source: http://handhelds.org/moin/moin.cgi/Ipkg
+Description: The Itsy Package Installer from handhelds.org
+
+
