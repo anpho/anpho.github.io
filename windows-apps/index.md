@@ -10,6 +10,6 @@ add-watermark-by-exit | A simple tool to add Date watermark to JPEG file. | [Dow
 
 ## Get In Touch
 
-[Email Me](mailto:anphorea@gmail.com) / [Telegram](http://t.me/anphogroup) / [@Twitter](https://twitter.com/anpho) / [Donate](https://www.paypal.me/anpho)
+[Email Me](mailto:anphorea@gmail.com) / [Telegram](https://t.me/anpho_software) / [@Twitter](https://twitter.com/anpho) 
 
 [Home](/)
