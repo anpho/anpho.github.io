@@ -29,7 +29,7 @@ Zhihu Daily | Zhihu Daily for BlackBerry 10 | [Download](https://appworld.blackb
 
 ## Get In Touch
 
-[Email Me](mailto:anphorea@gmail.com) / [Telegram](http://t.me/anphogroup) / [@Twitter](https://twitter.com/anpho) / [Donate](https://www.paypal.me/anpho)
+[Email Me](mailto:anphorea@gmail.com) / [Telegram](https://t.me/anpho_software) / [@Twitter](https://twitter.com/anpho)
 
 
 [Home](/)
