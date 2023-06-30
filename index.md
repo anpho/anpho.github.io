@@ -1,4 +1,8 @@
 
+## blogs
+
+1. [Cross-compile Configuration for BlackBerry 10](./docs/1-crosscompile-for-bb10/)
+
 ## apps, libs, docs
 
 This section includes apps & libs I've built.
@@ -11,4 +15,4 @@ Platform | Apps
 
 ## Get In Touch
 
-[Email Me](mailto:anphorea@gmail.com) / [Telegram](https://t.me/anpho_software) / [@Twitter](https://twitter.com/anpho)
+[@Twitter](https://twitter.com/anpho)

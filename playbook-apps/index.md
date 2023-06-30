@@ -8,10 +8,8 @@ Pixir Express | Pixir Express for playbook | [Download](https://appworld.blackbe
 Gps for China | a simple map app | [Download](https://appworld.blackberry.com/webstore/content/26851897) | Code Missed
 
 
-
 ## Get In Touch
 
-[Email Me](mailto:anphorea@gmail.com) / [Telegram](https://t.me/anpho_software) / [@Twitter](https://twitter.com/anpho)
-
+[@Twitter](https://twitter.com/anpho)
 
 [Home](/)

@@ -8,8 +8,9 @@ Win32DiskImager | This utility is used to read and write raw image files to SD a
 add-watermark-by-exit | A simple tool to add Date watermark to JPEG file. | [Download](https://github.com/anpho/add-date-watermark-to-jpeg-file/releases) | [Source](https://github.com/anpho/add-date-watermark-to-jpeg-file)
 
 
+
 ## Get In Touch
 
-[Email Me](mailto:anphorea@gmail.com) / [Telegram](https://t.me/anpho_software) / [@Twitter](https://twitter.com/anpho) 
+[@Twitter](https://twitter.com/anpho)
 
 [Home](/)

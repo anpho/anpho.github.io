@@ -27,9 +27,10 @@ Write(Read) | A simple app which helps you generate pinyin. | [Download](https:/
 Zhihu Daily | Zhihu Daily for BlackBerry 10 | [Download](https://appworld.blackberry.com/webstore/content/58370266) | [Source](https://github.com/anpho/zhihu)
 
 
+
 ## Get In Touch
 
-[Email Me](mailto:anphorea@gmail.com) / [Telegram](https://t.me/anpho_software) / [@Twitter](https://twitter.com/anpho)
+[@Twitter](https://twitter.com/anpho)
 
 
 [Home](/)
