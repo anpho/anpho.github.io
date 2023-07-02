@@ -16,3 +16,5 @@ Platform | Apps
 ## Get In Touch
 
 [@Twitter](https://twitter.com/anpho)
+
+<a rel="me" href="https://mas.to/@anpho">Mastodon</a>
