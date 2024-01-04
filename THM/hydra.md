@@ -1,4 +1,4 @@
-![image](https://github.com/anpho/anpho.github.io/assets/1021332/c83b3598-f758-4551-ab27-99b2ed1a1ec5)# THM ROOM Hydra
+# THM ROOM Hydra
 
 [THM Link](https://tryhackme.com/room/hydra?ref=anpho.github.io)
 
