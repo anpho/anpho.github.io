@@ -1,7 +1,8 @@
 
 ## blogs
 
-1. [20241207-LazyCat Report](./blogs/lazycat)
+1. [20241207-LazyCat Report](./blogs/2024-12-07-lazycat)
+2. [20241208-LazyCat Hacking](./blogs/2024-12-08-lazycat-hacking)
 
 ## notes
 
