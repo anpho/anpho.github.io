@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>Infox Powershell Script</title>
+      <link href="/2026/05/21/Infox-Powershell-Script/"/>
+      <url>/2026/05/21/Infox-Powershell-Script/</url>
+      
+        <content type="html"><![CDATA[<h3 id="Infox"><a href="#Infox" class="headerlink" title="Infox"></a>Infox</h3><p>因为想要屏蔽到某些 Windows 11 的右键菜单项， Vibe 了一个用于导出 appxpackage 详细信息的 <a href="https://github.com/anpho/Infox">Powershell 脚本</a>。<br>使用方法比较简单粗暴，下载后直接<code>i.ps1 keyword</code>就行，比如<code>照片</code>应用，可以运行<code>i.ps1 Photos</code>。</p><p>输出如：</p><table><thead><tr><th>项目</th><th>值</th></tr></thead><tbody><tr><td><strong>PackageFullName</strong></td><td>Microsoft.Windows.Photos_2026.11050.1001.0_x64__8wekyb3d8bbwe</td></tr><tr><td><strong>Name</strong></td><td>Microsoft.Windows.Photos</td></tr><tr><td><strong>Version</strong></td><td>2026.11050.1001.0</td></tr><tr><td><strong>Publisher</strong></td><td>CN&#x3D;Microsoft Corporation, O&#x3D;Microsoft Corporation, L&#x3D;Redmond, S&#x3D;Washington, C&#x3D;US</td></tr><tr><td><strong>InstalledLocation</strong></td><td>C:\Program Files\WindowsApps\Microsoft.Windows.Photos_2026.11050.1001.0_x64__8wekyb3d8bbwe</td></tr></tbody></table><p><strong>Extension</strong> | <strong>Category</strong>&#x3D;<code>windows.fileExplorerContextMenus</code></p><ul><li><strong>FileExplorerContextMenus</strong><ul><li><strong>ItemType</strong> | <strong>Type</strong>&#x3D;<code>.bmp</code><ul><li><strong>Verb</strong> | <strong>Id</strong>&#x3D;<code>AShellEdit</code> | <strong>Clsid</strong>&#x3D;<code>BFE0E2A4-C70C-4AD7-AC3D-10D1ECEBB5B4</code></li></ul></li></ul></li></ul><p>项目仓库和生成的文件示例见<a href="https://github.com/anpho/Infox">Github</a>。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> powershell </tag>
+            
+            <tag> script </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Friends的可行性</title>
       <link href="/2026/05/21/Friends%E7%9A%84%E5%8F%AF%E8%A1%8C%E6%80%A7/"/>
       <url>/2026/05/21/Friends%E7%9A%84%E5%8F%AF%E8%A1%8C%E6%80%A7/</url>
