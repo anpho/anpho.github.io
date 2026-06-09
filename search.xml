@@ -4,6 +4,29 @@
   
     
     <entry>
+      <title>PCDN的排查和相关问题</title>
+      <link href="/2026/06/09/PCDN%E7%9A%84%E6%8E%92%E6%9F%A5%E5%92%8C%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/"/>
+      <url>/2026/06/09/PCDN%E7%9A%84%E6%8E%92%E6%9F%A5%E5%92%8C%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</url>
+      
+        <content type="html"><![CDATA[<p>针对你遇到的宽带异常和 Android TV 排查需求，以下是具体的技术分析与解决方案： :)</p><h3 id="一、-如何在-Android-TV-上定位私自跑-PCDN-的-App"><a href="#一、-如何在-Android-TV-上定位私自跑-PCDN-的-App" class="headerlink" title="一、 如何在 Android TV 上定位私自跑 PCDN 的 App"></a>一、 如何在 Android TV 上定位私自跑 PCDN 的 App</h3><p>PCDN 应用的核心特征是<strong>持续占用大量上行带宽</strong>和<strong>维持高并发网络连接</strong>。在支持 ADB 且未 Root 的情况下，可以通过 Android 系统底层的流量统计文件来精准定位。</p><p><strong>步骤 1：通过 ADB 获取上行流量排行</strong><br>Android 系统会在 <code>/proc/net/xt_qtaguid/stats</code> 文件中记录每个 UID（用户 ID）的网络流量。<br>在电脑端连接 TV 后，运行以下命令，提取所有应用的上行流量（<code>tx_bytes</code>）并按从大到小排序，取前 10 名：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb shell <span class="string">&quot;cat /proc/net/xt_qtaguid/stats | awk &#x27;NR&gt;1 &#123;print \$4, \$8&#125;&#x27; | sort -k2 -n -r | head -n 10&quot;</span></span><br></pre></td></tr></table></figure><p><em>注：输出的第一列是 UID，第二列是上行字节数。找出第二列数值极大（例如几个 GB 甚至 TB 级别）的 UID。</em></p><p><strong>步骤 2：将 UID 映射为具体的 App 包名</strong><br>拿到可疑的 UID 后，通过以下命令查询该 UID 对应的应用包名：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb shell pm list packages -U | grep &lt;你的UID&gt;</span><br></pre></td></tr></table></figure><p><em>例如，如果上一步查出可疑 UID 是 <code>10088</code>，则运行 <code>adb shell pm list packages -U | grep 10088</code>，即可得到类似 <code>package:com.xxx.video uid:10088</code> 的结果。</em></p><p><strong>步骤 3：辅助验证（网络连接数）</strong><br>PCDN 还会产生大量并发连接。你可以通过以下命令查看当前的网络连接状态，观察哪个 IP 或端口在疯狂建立连接：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">adb shell netstat -tunp </span><br><span class="line"><span class="comment"># 如果提示权限不足，可使用：</span></span><br><span class="line">adb shell dumpsys connectivity | grep -i <span class="string">&quot;Active&quot;</span></span><br></pre></td></tr></table></figure><p>结合包名，在 Android TV 的设置中强制停止该应用，并卸载或禁止其后台自启。常见的伪装 PCDN 应用包括某些视频软件的“加速版”、陌生的路由器插件、或者名为“网盘”、“播放器”的第三方修改版应用。</p><hr><h3 id="二、-拨号上网如何“突破”网速限制"><a href="#二、-拨号上网如何“突破”网速限制" class="headerlink" title="二、 拨号上网如何“突破”网速限制"></a>二、 拨号上网如何“突破”网速限制</h3><p>首先需要明确一个核心概念：<strong>如果是运营商因为你触发 PCDN 策略而在局端（BRAS&#x2F;SR 设备）对你的 PPPoE 会话进行了限速（例如上行被锁死在 5Mbps 或 10Mbps），这种限制在本地路由器端是绝对无法通过技术手段“突破”的。</strong> 限速发生在运营商机房，你的设备只能尝试“规避检测”以恢复正常带宽，或者优化物理网络。</p><h4 id="1-规避运营商-PCDN-检测（恢复被限制的上行带宽）"><a href="#1-规避运营商-PCDN-检测（恢复被限制的上行带宽）" class="headerlink" title="1. 规避运营商 PCDN 检测（恢复被限制的上行带宽）"></a>1. 规避运营商 PCDN 检测（恢复被限制的上行带宽）</h4><p>运营商检测 PCDN 主要依赖四个维度：上行流量饱和度、NAT 连接数、特定端口&#x2F;SNI 特征、IPv6 滥用。你可以采取以下策略降低被标记的概率：</p><ul><li><strong>物理隔离与 QoS 限速</strong>：在路由器上为跑 PCDN 的设备（或特定 IP&#x2F;MAC）设置严格的 QoS。<strong>上行带宽绝对不能超过套餐标称上行的 50%</strong>（例如 30M 上行，限制在 15M 以内）。同时限制该设备的<strong>最大并发连接数</strong>（建议限制在 1000 以内）。</li><li><strong>关闭或严格限制 IPv6</strong>：大量 PCDN 调度利用 IPv6 绕过 NAT，导致连接数暴增，这是运营商目前查处的重灾区。建议在路由器中直接关闭 IPv6，或者在防火墙中严格限制 IPv6 的出站连接数。</li><li><strong>光猫改桥接，路由器拨号</strong>：光猫路由模式下的 NAT 类型和连接数管理较弱。将光猫改为桥接模式，使用性能较好的软路由或硬路由进行 PPPoE 拨号，利用路由器的 NAT 防火墙特性隐藏内网拓扑。</li><li><strong>重置会话（临时方案）</strong>：如果已经被临时限速，可以尝试在路由器中修改 WAN 口的 MAC 地址，然后重启光猫和路由器重新拨号。这有一定概率会更换 IP 或重置局端的限速策略，但治标不治本。</li></ul><h4 id="2-突破物理-套餐带宽瓶颈（如果未被局端限速）"><a href="#2-突破物理-套餐带宽瓶颈（如果未被局端限速）" class="headerlink" title="2. 突破物理&#x2F;套餐带宽瓶颈（如果未被局端限速）"></a>2. 突破物理&#x2F;套餐带宽瓶颈（如果未被局端限速）</h4><p>如果你是指宽带本身跑不满（例如 1000M 宽带只能跑到 300M），请排查以下拨号与硬件环节：</p><ul><li><strong>光猫瓶颈</strong>：很多运营商下发的光猫 LAN 口只有百兆，或者光猫 CPU 性能不足无法处理千兆 NAT。<strong>必须改桥接</strong>，让路由器负责拨号和 NAT。</li><li><strong>多线多拨</strong>：如果当地运营商没有在局端做端口绑定或 MAC 地址绑定，可以使用支持多 WAN 的路由器进行“并发多拨”。通过负载均衡叠加带宽（注意：部分地区多拨会被系统自动限速或封号，需自行测试）。</li><li><strong>硬件链路排查</strong>：确保光猫到路由器、路由器到电脑的所有网线均为超五类（Cat5e）或六类（Cat6）以上；确保路由器的 WAN&#x2F;LAN 口及电脑网卡支持千兆或 2.5G。</li><li><strong>TCP 窗口与卸载</strong>：在软路由（如 OpenWrt&#x2F;iKuai）中，开启硬件流量卸载（Flow Offloading），并适当调整 TCP 拥塞控制算法（如 BBR），可以提升高延迟下的吞吐量。</li></ul><p><strong>最后提示</strong>：目前三大运营商对家宽跑 PCDN 的打击力度空前，通常采用“第一次警告&#x2F;限速 -&gt; 第二次停机写承诺书 -&gt; 第三次永久拆机并拉入黑名单”的策略。为了宽带的长期稳定使用，建议彻底清理内网中的 PCDN 设备。</p><p>Via Qwen.</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> AI </tag>
+            
+            <tag> Chats </tag>
+            
+            <tag> Qwen </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Ford TCM阵亡</title>
       <link href="/2026/06/08/Ford-TCM%E9%98%B5%E4%BA%A1/"/>
       <url>/2026/06/08/Ford-TCM%E9%98%B5%E4%BA%A1/</url>
