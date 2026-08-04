@@ -4,6 +4,29 @@
   
     
     <entry>
+      <title>在群晖中升级immich版本</title>
+      <link href="/2026/08/04/%E5%9C%A8%E7%BE%A4%E6%99%96%E4%B8%AD%E5%8D%87%E7%BA%A7immich%E7%89%88%E6%9C%AC/"/>
+      <url>/2026/08/04/%E5%9C%A8%E7%BE%A4%E6%99%96%E4%B8%AD%E5%8D%87%E7%BA%A7immich%E7%89%88%E6%9C%AC/</url>
+      
+        <content type="html"><![CDATA[<p>immich 在群晖 container manager 中的升级操作比较简单，步骤如下：</p><ol><li>在 container manager 的项目中，操作&#x2F;停止 immich。</li><li>点击操作&#x2F;清除</li><li>在 “映像” 中，删除未使用的映像</li><li>回到 “项目” 中，进行 构建</li></ol><p>升级完成。</p><p>如果需要跨版本升级，比如从v2升级到v3，需要阅读相应的<a href="https://immich.app/blog/v3-migration">文档</a>并修改.env文件。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> immich </tag>
+            
+            <tag> synology </tag>
+            
+            <tag> docker </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>AI短剧对行业的影响</title>
       <link href="/2026/07/31/AI%E7%9F%AD%E5%89%A7%E5%AF%B9%E8%A1%8C%E4%B8%9A%E7%9A%84%E5%BD%B1%E5%93%8D/"/>
       <url>/2026/07/31/AI%E7%9F%AD%E5%89%A7%E5%AF%B9%E8%A1%8C%E4%B8%9A%E7%9A%84%E5%BD%B1%E5%93%8D/</url>
@@ -310,9 +333,9 @@
       
         <tags>
             
-            <tag> Chats </tag>
-            
             <tag> AI </tag>
+            
+            <tag> Chats </tag>
             
             <tag> Qwen </tag>
             
@@ -333,9 +356,9 @@
       
         <tags>
             
-            <tag> Chats </tag>
-            
             <tag> AI </tag>
+            
+            <tag> Chats </tag>
             
             <tag> Qwen </tag>
             
@@ -356,9 +379,9 @@
       
         <tags>
             
-            <tag> Chats </tag>
-            
             <tag> AI </tag>
+            
+            <tag> Chats </tag>
             
             <tag> Qwen </tag>
             
@@ -379,9 +402,9 @@
       
         <tags>
             
-            <tag> Chats </tag>
-            
             <tag> AI </tag>
+            
+            <tag> Chats </tag>
             
             <tag> Qwen </tag>
             
@@ -402,13 +425,13 @@
       
         <tags>
             
-            <tag> Chats </tag>
-            
             <tag> AI </tag>
             
-            <tag> Qwen </tag>
-            
             <tag> Grok </tag>
+            
+            <tag> Chats </tag>
+            
+            <tag> Qwen </tag>
             
         </tags>
       
@@ -427,9 +450,9 @@
       
         <tags>
             
-            <tag> Chats </tag>
-            
             <tag> AI </tag>
+            
+            <tag> Chats </tag>
             
             <tag> Doubao </tag>
             
@@ -471,13 +494,13 @@
       
         <tags>
             
-            <tag> Chats </tag>
-            
             <tag> AI </tag>
             
-            <tag> Qwen </tag>
-            
             <tag> Grok </tag>
+            
+            <tag> Chats </tag>
+            
+            <tag> Qwen </tag>
             
         </tags>
       
@@ -496,13 +519,13 @@
       
         <tags>
             
-            <tag> Chats </tag>
-            
             <tag> AI </tag>
             
-            <tag> Qwen </tag>
-            
             <tag> Grok </tag>
+            
+            <tag> Chats </tag>
+            
+            <tag> Qwen </tag>
             
         </tags>
       
@@ -521,13 +544,13 @@
       
         <tags>
             
-            <tag> Chats </tag>
-            
             <tag> AI </tag>
             
-            <tag> Qwen </tag>
-            
             <tag> Grok </tag>
+            
+            <tag> Chats </tag>
+            
+            <tag> Qwen </tag>
             
         </tags>
       
@@ -546,13 +569,13 @@
       
         <tags>
             
-            <tag> Chats </tag>
-            
             <tag> AI </tag>
             
-            <tag> Qwen </tag>
-            
             <tag> Grok </tag>
+            
+            <tag> Chats </tag>
+            
+            <tag> Qwen </tag>
             
         </tags>
       
