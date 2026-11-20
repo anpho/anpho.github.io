@@ -11,9 +11,9 @@
   --rule: #d9d2c2;
   --rule-strong: #c4baa4;
   --accent: #8c3b2e;
-  --serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Georgia,
-    "Songti SC", "STSong", "Noto Serif CJK SC", "Source Han Serif SC", "SimSun", serif;
-  --sans: "Segoe UI", system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+  --serif: "SimSun", "宋体", "Songti SC", "STSong", "Noto Serif CJK SC",
+    "Source Han Serif SC", serif;
+  --sans: var(--serif);
   --mono: "Cascadia Mono", ui-monospace, Consolas, "Courier New", monospace;
 }
 
