@@ -1,0 +1,455 @@
+/* ==========================================================================
+   anpho.github.io — a small paper about two Windows tools
+   ========================================================================== */
+
+:root {
+  --paper: #fbfaf5;
+  --paper-alt: #f6f2e8;
+  --ink: #1e1d19;
+  --ink-soft: #37342d;
+  --muted: #726b5d;
+  --rule: #d9d2c2;
+  --rule-strong: #c4baa4;
+  --accent: #8c3b2e;
+  --serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Georgia,
+    "Songti SC", "STSong", "Noto Serif CJK SC", "Source Han Serif SC", "SimSun", serif;
+  --sans: "Segoe UI", system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+  --mono: "Cascadia Mono", ui-monospace, Consolas, "Courier New", monospace;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  padding: 52px 20px;
+  background-color: #e5ded0;
+  background-image: linear-gradient(180deg, #eae4d8 0%, #e1d9c9 100%);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 17px;
+  line-height: 1.9;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: #e7d3c8;
+  color: #3a1c15;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.paper {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: clamp(40px, 6vw, 68px) clamp(26px, 7vw, 84px) 34px;
+  background: var(--paper);
+  border: 1px solid #d6cebd;
+  box-shadow:
+    0 1px 2px rgba(60, 50, 30, 0.12),
+    0 34px 70px -34px rgba(60, 50, 30, 0.45);
+}
+
+/* --------------------------------------------------------------------------
+   Masthead
+   -------------------------------------------------------------------------- */
+
+.masthead {
+  text-align: center;
+}
+
+.masthead::before {
+  content: "";
+  display: block;
+  margin-bottom: 30px;
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  height: 3px;
+}
+
+.preprint {
+  margin: 0 0 28px;
+  font-family: var(--sans);
+  font-size: 0.66rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.preprint span {
+  margin: 0 0.35em;
+  color: var(--rule-strong);
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: clamp(1.9rem, 4.4vw, 2.6rem);
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0.01em;
+  text-wrap: balance;
+}
+
+.subtitle {
+  margin: 0 0 20px;
+  font-style: italic;
+  font-size: clamp(0.98rem, 1.8vw, 1.12rem);
+  color: var(--muted);
+}
+
+.byline {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 0.77rem;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+}
+
+.byline span {
+  margin: 0 0.5em;
+  color: var(--rule-strong);
+}
+
+.byline a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule-strong);
+}
+
+.byline a:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* --------------------------------------------------------------------------
+   Abstract
+   -------------------------------------------------------------------------- */
+
+.abstract {
+  margin-top: 38px;
+  padding: 20px 0 16px;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+
+.abstract h2 {
+  margin: 0 0 10px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.abstract h2 span {
+  margin-left: 0.5em;
+  font-family: var(--sans);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.abstract p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 2;
+  text-align: justify;
+  text-justify: inter-ideograph;
+  color: var(--ink-soft);
+}
+
+.abstract strong {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.keywords {
+  margin-top: 14px !important;
+  font-family: var(--sans);
+  font-size: 0.76rem;
+  line-height: 1.8;
+  text-align: left !important;
+  color: var(--muted);
+}
+
+.keywords .label {
+  margin-right: 0.7em;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: 0.08em;
+}
+
+/* --------------------------------------------------------------------------
+   Entries
+   -------------------------------------------------------------------------- */
+
+.entry {
+  margin-top: 54px;
+}
+
+.entry h2 {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin: 0 0 18px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--rule);
+  font-size: clamp(1.35rem, 2.6vw, 1.55rem);
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: 0.01em;
+}
+
+.entry h2 .num {
+  font-family: var(--sans);
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--accent);
+}
+
+.entry h2 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.entry h2 a:hover {
+  color: var(--accent);
+}
+
+.entry h2 .ext {
+  margin-left: 0.35em;
+  font-family: var(--sans);
+  font-size: 0.72em;
+  font-weight: 400;
+  color: var(--muted);
+  transition: color 0.2s ease;
+}
+
+.entry h2 a:hover .ext {
+  color: var(--accent);
+}
+
+figure {
+  margin: 0 0 18px;
+}
+
+.figure-link {
+  display: block;
+  border: 1px solid var(--rule-strong);
+  background: #fff;
+  box-shadow: 0 10px 26px -20px rgba(60, 50, 30, 0.55);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.figure-link:hover {
+  border-color: var(--accent);
+  box-shadow: 0 14px 32px -20px rgba(60, 50, 30, 0.6);
+}
+
+.figure-link img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+figcaption {
+  margin-top: 9px;
+  font-size: 0.78rem;
+  line-height: 1.75;
+  color: var(--muted);
+  text-align: justify;
+  text-justify: inter-ideograph;
+}
+
+.fig-label {
+  margin-right: 0.55em;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.intro {
+  margin: 0;
+  font-size: 0.97rem;
+  line-height: 2.05;
+  text-align: justify;
+  text-justify: inter-ideograph;
+  color: var(--ink-soft);
+}
+
+/* --------------------------------------------------------------------------
+   References
+   -------------------------------------------------------------------------- */
+
+.references {
+  margin-top: 60px;
+  padding-top: 20px;
+  border-top: 1px solid var(--ink);
+}
+
+.references h2 {
+  margin: 0 0 12px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.references h2 span {
+  margin-left: 0.5em;
+  font-family: var(--sans);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.references ol {
+  margin: 0;
+  padding-left: 2.1em;
+}
+
+.references li {
+  margin-bottom: 4px;
+  font-size: 0.8rem;
+  line-height: 1.9;
+  color: var(--ink-soft);
+}
+
+.ref-name {
+  font-style: italic;
+}
+
+.references a {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule-strong);
+}
+
+.references a:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* --------------------------------------------------------------------------
+   Colophon
+   -------------------------------------------------------------------------- */
+
+.colophon {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px 24px;
+  flex-wrap: wrap;
+  margin-top: 46px;
+  padding-top: 14px;
+  border-top: 1px solid var(--rule);
+  font-family: var(--sans);
+  font-size: 0.68rem;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+}
+
+.colophon a {
+  color: var(--muted);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.colophon a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+/* --------------------------------------------------------------------------
+   Small screens
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 620px) {
+  body {
+    padding: 0;
+    font-size: 16px;
+    background: var(--paper);
+  }
+
+  .paper {
+    max-width: none;
+    padding: 30px 22px 26px;
+    border: 0;
+    box-shadow: none;
+  }
+
+  .masthead::before {
+    margin-bottom: 24px;
+  }
+
+  .preprint {
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+    line-height: 1.4;
+  }
+
+  .subtitle {
+    margin-bottom: 14px;
+  }
+
+  .abstract {
+    margin-top: 28px;
+  }
+
+  .entry {
+    margin-top: 42px;
+  }
+
+  .entry h2 {
+    gap: 9px;
+  }
+
+  figcaption,
+  .intro,
+  .abstract p {
+    text-align: left;
+  }
+
+  .colophon {
+    margin-top: 36px;
+  }
+}
+
+@media print {
+  body {
+    padding: 0;
+    background: #fff;
+  }
+
+  .paper {
+    max-width: none;
+    border: 0;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
