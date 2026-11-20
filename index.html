@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>两个原生 Windows 小工具 — anpho</title>
-<meta name="description" content="anpho 的原生 Windows 工具：USBinfo、Win32 Disk Imager 与 Explorer Extensions。Win32 API，轻量交付，源码公开。">
+<meta name="description" content="anpho 的本地优先 Windows 工具：USBinfo、Win32 Disk Imager 与 Explorer Extensions。Win32 API，轻量交付，源码公开。">
 <meta name="theme-color" content="#e7e0d3">
 <meta name="color-scheme" content="light">
 <link rel="canonical" href="https://anpho.github.io/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://anpho.github.io/">
 <meta property="og:title" content="原生 Windows 小工具 — anpho">
-<meta property="og:description" content="USBinfo、Win32 Disk Imager 与 Explorer Extensions：Win32 API，轻量交付，源码公开。">
+<meta property="og:description" content="USBinfo、Win32 Disk Imager 与 Explorer Extensions：本地优先，Win32 API，轻量交付，源码公开。">
 <meta property="og:image" content="https://anpho.github.io/assets/img/usbinfo.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:creator" content="@anpho">
@@ -34,8 +34,8 @@
 
   <section class="abstract" aria-labelledby="abstract-heading">
     <h2 id="abstract-heading">摘要 <span>Abstract</span></h2>
-    <p>以下为 Windows 10 / 11 平台的原生小工具：<strong>USBinfo</strong> 用于检视 USB 拓扑、描述符与存储状态，<strong>Win32 Disk Imager</strong> 用于读写和校验磁盘镜像，<strong>Explorer Extensions</strong> 为资源管理器补上两个整理文件夹的右键命令。这些工具直接调用 Win32 API，以单个可执行文件或 DLL 交付，不依赖 Electron、Qt 或额外运行时；体积小、启动快，源码公开，便于审查、构建与修改。</p>
-    <p class="keywords"><span class="label">关键词</span>Win32；原生；小；源码公开</p>
+    <p>以下为 Windows 10 / 11 平台的原生小工具：<strong>USBinfo</strong> 用于检视 USB 拓扑、描述符与存储状态，<strong>Win32 Disk Imager</strong> 用于读写和校验磁盘镜像，<strong>Explorer Extensions</strong> 为资源管理器补上两个整理文件夹的右键命令。这些工具遵循本地优先（local first）的原则：能在本机完成的事，就留在本机，不依赖账号、云服务或网络请求。它们直接调用 Win32 API，以单个可执行文件或 DLL 交付，不依赖 Electron、Qt 或额外运行时；体积小、启动快，源码公开，便于审查、构建与修改。</p>
+    <p class="keywords"><span class="label">关键词</span>本地优先；Win32；原生；小；源码公开</p>
   </section>
 
   <main>
