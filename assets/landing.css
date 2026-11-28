@@ -258,6 +258,16 @@ figure {
   margin-right: auto;
 }
 
+.figure--icon {
+  max-width: 220px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.figure--icon .figure-link {
+  padding: 12px;
+}
+
 .figure-link {
   display: block;
   border: 1px solid var(--rule-strong);

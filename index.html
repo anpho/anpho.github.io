@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Windows 工具 — anpho</title>
-<meta name="description" content="本地优先 Windows 工具：USBinfo、Win32 Disk Imager 与 Explorer Extensions。Win32 API，轻量交付，源码公开。">
+<meta name="description" content="本地优先 Windows 工具：USBinfo、Win32 Disk Imager、Explorer Extensions 与 Peek2。Win32 API，轻量交付，源码公开。">
 <meta name="theme-color" content="#e7e0d3">
 <meta name="color-scheme" content="light">
 <link rel="canonical" href="https://anpho.github.io/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://anpho.github.io/">
 <meta property="og:title" content="原生 Windows 小工具 — anpho">
-<meta property="og:description" content="USBinfo、Win32 Disk Imager 与 Explorer Extensions：本地优先，Win32 API，轻量交付，源码公开。">
+<meta property="og:description" content="USBinfo、Win32 Disk Imager、Explorer Extensions 与 Peek2：本地优先，Win32 API，轻量交付，源码公开。">
 <meta property="og:image" content="https://anpho.github.io/assets/img/usbinfo.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:creator" content="@anpho">
@@ -34,7 +34,7 @@
 
   <section class="abstract" aria-labelledby="abstract-heading">
     <h2 id="abstract-heading">摘要 <span>Abstract</span></h2>
-    <p>以下为 Windows 10 / 11 平台的原生小工具：<strong>USBinfo</strong> 用于检视 USB 拓扑、描述符与存储状态，<strong>Win32 Disk Imager</strong> 用于读写和校验磁盘镜像，<strong>Explorer Extensions</strong> 为资源管理器补上两个整理文件夹的右键命令。这些工具遵循本地优先（local first）的原则：能在本机完成的事，就留在本机，不依赖账号、云服务或网络请求。它们直接调用 Win32 API，以单个可执行文件或 DLL 交付，不依赖 Electron、Qt 或额外运行时；体积小、启动快，源码公开，便于审查、构建与修改。</p>
+    <p>以下为 Windows 10 / 11 平台的原生小工具：<strong>USBinfo</strong> 用于检视 USB 拓扑、描述符与存储状态，<strong>Win32 Disk Imager</strong> 用于读写和校验磁盘镜像，<strong>Explorer Extensions</strong> 为资源管理器补上两个整理文件夹的右键命令，<strong>Peek2</strong> 把 PowerToys Peek 重写为原生文件预览器。这些工具遵循本地优先（local first）的原则：能在本机完成的事，就留在本机，不依赖账号、云服务或网络请求。它们直接调用 Win32 API，以轻量的可执行文件或 DLL 交付，不依赖 Electron、Qt 或额外运行时；体积小、启动快，源码公开，便于审查、构建与修改。</p>
     <p class="keywords"><span class="label">关键词</span>本地优先；Win32；原生；小；源码公开</p>
   </section>
 
@@ -82,6 +82,20 @@
       <p class="intro">Explorer Extensions 为资源管理器补上两个右键命令：「新建文件夹 +」把所选内容按公共前缀归入新文件夹，「摊开文件夹 +」把文件夹树原地摊平，两者都能用 Ctrl+Z 撤销。它是一个原生的 Win32 Shell 扩展，静态运行库，不依赖 .NET、MFC 或 VC++ 运行库，也不需要管理员权限。整个项目只有一个 DLL 和一个小管理器，无遥测、不访问网络；个人非商业使用免费，源码公开。</p>
     </section>
 
+    <section class="entry" id="peek2" aria-labelledby="peek2-title">
+      <h2 id="peek2-title">
+        <span class="num">4</span>
+        <a href="Peek2/">Peek2<span class="ext" aria-hidden="true">↗</span></a>
+      </h2>
+      <figure class="figure--icon">
+        <a class="figure-link" href="Peek2/" aria-label="打开 Peek2 项目主页">
+          <img src="assets/img/peek2-icon.png" alt="Peek2 图标：文件上的放大镜。" width="512" height="512" decoding="async">
+        </a>
+        <figcaption><span class="fig-label">图 4</span>Peek2 图标。项目主页说明按空格预览的用法，并提供安装包与免安装版下载。</figcaption>
+      </figure>
+      <p class="intro">Peek2 是基于 PowerToys Peek 的原生文件预览工具：在资源管理器中选中文件，按空格即可预览，窗口随内容缩放、画面铺满无黑边。界面以 C++20 与 WTL 重写，仅依赖系统自带组件，安装包约 2.9 MB；支持 PDF / TIFF 多页缩略图、图片缩放平移、音视频播放与左右键切换文件。设置与注册表项独立存放于 anpho\Peek2，可与 PowerToys 并存；遵循 MIT 许可（WTL 遵循 MS-PL），源码公开。</p>
+    </section>
+
   </main>
 
   <section class="references" aria-labelledby="refs-heading">
@@ -90,6 +104,7 @@
       <li><span class="ref-name">USBinfo</span> — <a href="USBinfo/">项目主页</a>，<a href="https://github.com/anpho/USBinfo">源码</a>，<a href="https://github.com/anpho/USBinfo/releases">发布版</a>。</li>
       <li><span class="ref-name">Win32 Disk Imager</span> — <a href="Win32DiskImager2/">项目主页</a>，<a href="https://github.com/anpho/Win32DiskImager2">源码</a>，<a href="Win32DiskImager2/Win32DiskImager.exe">下载</a>。</li>
       <li><span class="ref-name">Explorer Extensions</span> — <a href="ExplorerExtensions/">项目主页</a>，<a href="https://github.com/anpho/ExplorerExtensions">源码</a>，<a href="https://github.com/anpho/ExplorerExtensions/releases">发布版</a>。</li>
+      <li><span class="ref-name">Peek2</span> — <a href="Peek2/">项目主页</a>，<a href="https://github.com/anpho/Peek2">源码</a>，<a href="https://github.com/anpho/Peek2/releases">发布版</a>。</li>
     </ol>
   </section>
 
